@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 1rem 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.2rem;
+        }
+
+        nav a:hover {
+            color: #f4f4f4;
+            text-decoration: underline;
+        }
+
+        section {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .project-card {
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background: #333;
+            color: #fff;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="462578464_1151243219752498_5102380424171755267_n.jpg" alt="My Portfolio Logo" style="max-width: 100px; border-radius: 50%; margin-bottom: 1rem;">
+    <h1>My Online Portfolio</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+    </nav>
+</header>
+
+<section id="home">
+    <h2>Welcome to My Portfolio</h2>
+    <p>Hello! I'm Mark Rycan L. Abnasan, a passionate network security expert dedicated to creating innovative solutions. Explore my portfolio to discover my work in securing digital environments and safeguarding critical systems.</p>
+</section>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>I am a cybersecurity analyst with a keen interest in identifying vulnerabilities and protecting digital infrastructures. I enjoy solving complex security problems and constantly learning new technologies in the field of cybersecurity.</p>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+        <div class="project-card">
+            <h3>Project 1</h3>
+            <p>A vulnerability assessment tool for identifying security risks in web applications.</p>
+        </div>
+        <div class="project-card">
+            <h3>Project 2</h3>
+            <p>A network intrusion detection system (IDS) to monitor and protect against cyber threats.</p>
+        </div>
+        <div class="project-card">
+            <h3>Project 3</h3>
+            <p>A secure file transfer application with end-to-end encryption for data protection.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 My Portfolio</p>
+</footer>
+
+<script>
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(event) {
+            event.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+</script>
+
+</body>
+</html>
